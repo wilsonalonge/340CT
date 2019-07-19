@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<div class="topnav">
+		<a href="/">Home</a>
+		<a href="/login">login</a>
+		<a href="/register">register</a>
+
+	</div>
+	<head>
+		<meta charset="utf-8">
+		<title>Article</title>
+		<meta name="author" content="Wilson Alonge">
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Article {{this.ID}} </h1>
+		{{#if msg}}
+ 			<p class="msg">{{msg}}</p>
+		{{/if}}
+		{{#each article}}
+		<tr>
+		<h1>{{this.headline}}</a></h11> </br>
+		<h2>{{this.date}}</h2></br></br>
+		<p1>{{this.MLC}}</p1></br>
+		</tr>
+		{{/each}}
+	</body>
+</html>

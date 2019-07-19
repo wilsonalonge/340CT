@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<div class="topnav">
+		<a href="/">Home</a>
+		<a href="/login">login</a>
+		<a href="/register">register</a>
+
+	</div>
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<meta name="description" content="articles">
+		<meta name="author" content="wilson ">
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Home</h1>
+		<p>This is a secure page. Users need to have a valid account and be logged in to see it.</p>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Headline</th>
+				<th>Short Summary</th>
+				<th>date</th>
+			</tr>
+			</br></br></br></br>
+			{{#each article}}
+				<tr>
+					<p1 >{{this.ID}}   </p1>
+					<p1><a href="/article?id={{this.ID}}">{{this.headline}}</a></p1> </br>
+					<p1>{{this.shortSummary}}</p1></br>
+					<p1>{{this.date}}</p1></br></br>
+				</tr>
+			{{/each}}
+		</table>
+	</body>
+</html>

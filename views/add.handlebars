@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Headline</th>
+        <th>Short Summary</th>
+        <th>date</th>
+    </tr>
+    {{#each article}}
+        <tr>
+            <td>{{this.ID}}</td>
+            <td>{{this.headline}}</td>
+            <td>{{this.shortSummary}}</td>
+            <td>{{this.date}}</td>
+        </tr>
+    {{/each}}
+</table>
+<body>
+		<h1>Add an article</h1>
+		<form action="/upload" method="post">
+			<p>Headline:<br /><input type="text" name="headline"  value="" autofocus></p>
+			<p>Short Summary:<br /><input type="text" name="shortSummary"  value="" autocomplete="off"></p>
+			<p><input type="file" value="Add"></p>
+			<p>Article Content:<br /><input type="text" name="MLC" value=""  autocomplete="off"></p>
+			<p><input type="submit" value="Add"></p>
+		</form>
+		
+
+</body>
+</html>
