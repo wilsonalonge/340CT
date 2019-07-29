@@ -7,7 +7,7 @@
 // 'use strict'
 
 /* MODULE IMPORTS */
-const Koa = require('koa')
+const Koa = require('koa');
 // import Router from 'koa-trie-router'
 const Router = require('koa-router')
 const views = require('koa-views')
@@ -58,19 +58,22 @@ global.rows;
 router.get('/', async ctx => {
 	// console.log(data)
 
-try {
-		if(ctx.session.authorised !== true) return ctx.redirect('/login?msg=you need to log in')
+// try {
+		if(ctx.session.authorised !== true){ return ctx.redirect('/login?msg=you need to log in')}
+		
 		
 		// if(ctx.query.msg){} data.msg = ctx.query.msg
-		const sql = 'SELECT * FROM Articles;'
-				db.all(sql, [], (err, rows) => {
-				if (err) {
-					console.error('db error: '+ err.message)
-					throw err;
-				}
-				if(!err){
-				articl = rows;
-				}
+		
+		//take out
+		// const sql = 'SELECT * FROM Articles;'
+		// 		db.all(sql, [], (err, rows) => {
+		// 		if (err) {
+		// 			console.error('db error: '+ err.message)
+		// 			throw err;
+		// 		}
+		// 		if(!err){
+		// 		articl = rows;
+		// 		}
 				// console.log(data)
 
 				// var index = this.render('index')
@@ -78,15 +81,16 @@ try {
 				// console.log(rows)
 				// console.log(ctx.matchedRoute)
 
-	})
-	// console.log(rows)
-	ctx.redirect('')
-	await console.log(articl)
-	var index = await ctx.render('index', { article: articl })
+	// })
+	// // console.log(rows)
+	// ctx.redirect('')
+	// await console.log(articl)
+	// var index = await ctx.render('index', { article: articl })
 	
-	} catch(err) {
-		await ctx.render('error', {message: err.message})
-	}
+	// } 
+	// catch(err) {
+	// 	await ctx.render('error', {message: err.message})
+	// }
 // router.get('/', function(ctx) {
 		// try {
 				// const sql = 'SELECT * FROM Articles;'
