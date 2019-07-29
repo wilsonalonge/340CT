@@ -22,15 +22,15 @@
 				<th>ID</th>
 				<th>Headline</th>
 				<th>Short Summary</th>
-				<th>date</th>
+				{{!-- <th>date</th> --}}
 			</tr>
 			</br></br></br></br>
 			{{#each article}}
 				<tr>
 					<p1 >{{this.ID}}   </p1>
-					<p1><a href="/article?id={{this.ID}}">{{this.headline}}</a></p1> </br>
+					<p1><a href="/article?id={{this.id}}">{{this.headline}}</a></p1> </br>
 					<p1>{{this.shortSummary}}</p1></br>
-					<p1>{{this.date}}</p1></br></br>
+					{{!-- <p1>{{this.date}}</p1></br></br> --}}
 				</tr>
 			{{/each}}
 		</table>
