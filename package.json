@@ -27,7 +27,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.3",
+    "bcrypt": "^5.0.0",
     "bcrypt-promise": "^2.0.0",
     "fs-extra": "^7.0.1",
     "handlebars": "^4.1.2",
