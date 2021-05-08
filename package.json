@@ -30,7 +30,7 @@
     "bcrypt": "^3.0.3",
     "bcrypt-promise": "^2.0.0",
     "fs-extra": "^7.0.1",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "jimp": "^0.6.0",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
